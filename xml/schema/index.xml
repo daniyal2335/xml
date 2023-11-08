@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="index.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<aptech>
+    <faculty>
+        <faculty-name>daniyal khan</faculty-name>
+        <facultyemail>daniyal@gmail.com</facultyemail>
+        <facultycity>karachi</facultycity>
+        <facultyage>18</facultyage>
+    
+    </faculty>
+    <faculty>
+        <faculty-name>daniyal khan</faculty-name>
+        <facultyemail>daniyal@gmail.com</facultyemail>
+        <facultycity>karachi</facultycity>
+        <facultyage>18</facultyage>
+    </faculty>
+    <faculty>
+        <faculty-name>daniyalkhan</faculty-name>
+        <facultyemail>daniyal@gmail.com</facultyemail>
+        <facultycity>lahore</facultycity>
+        <facultyage></facultyage>
+    </faculty>
+    <it>
+        <empname></empname>
+        <salary></salary>
+    </it>
+    <examination></examination>
+</aptech>
