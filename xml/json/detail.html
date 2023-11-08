@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap-4.5.3-dist/css/bootstrap.min.css">
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/bootstrap-4.5.3-dist/js/bootstrap.min.js">
+  
+</head>
+
+<body>
+   <div class="container">
+    <div class="row mt-5">
+        
+    </div>
+   </div>
+   <script>
+    let row1=$('.row');
+    let url=location.href;
+    let obj=new URL(url);
+    let name= obj.searchParams.get('name');
+    let price =obj.searchParams.get('price');
+    let image=obj.searchParams.get('image');
+    let des=obj.searchParams.get('des');
+    row1.html(
+        `  <div class="col-md-5">
+            <img class="card-img-top" src="`+image + `" alt="">
+            </div>
+            <div class="col-md-5">
+                <div class="card-body">
+                    <h4 class="card-title">`+ name + `</h4>
+                          <p class="card-text"style="color:red">`+ price+ `</p>
+                          <p class="card-text">`+des+ `</p>
+                          <button class="btn btn-info">Add to Cart</button>
+                          </div>
+                </div>`
+    )
+   </script>
+</body>
+
+</html>

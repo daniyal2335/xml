@@ -1,0 +1,17 @@
+{
+    "kfc":[
+        {"id":1,"pName":"burger","price":"500"},
+        {"id":2,"pName":"pizza","price":"600"},
+        {"id":3,"pName":"colddrink","price":"100"}
+    ],
+    "kbc":[
+        {"id":4,"pName":"burger","price":"500"},
+        {"id":5,"pName":"pizza","price":"600"},
+        {"id":6,"pName":"colddrink","price":"100"}
+    ],
+    "subway":[
+        {"id":7,"pName":"burger","price":"500"},
+        {"id":8,"pName":"pizza","price":"600"},
+        {"id":9,"pName":"colddrink","price":"100"}
+    ]
+}

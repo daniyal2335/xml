@@ -1,0 +1,23 @@
+{
+    "perfumes":[
+        {"id":1,"pName":"perfumes1","pPrice":3000,"pImage":"images/p1.jpg"},
+        {"id":2,"pName":"perfumes2","pPrice":4000,"pImage":"images/p2.jpg"},
+        {"id":3,"pName":"perfumes3","pPrice":5000,"pImage":"images/p3.jpg"},
+        {"id":4,"pName":"perfumes4","pPrice":7000,"pImage":"images/p4.jpg"},
+        {"id":5,"pName":"perfumes5","pPrice":9000,"pImage":"images/p5.jpg"}
+    ],
+    "shoes":[
+        {"id":1,"pName":"shoes1","pPrice":3000,"pImage":"images/s1.jpg"},
+        {"id":2,"pName":"shoes2","pPrice":4000,"pImage":"images/s2.jpg"},
+        {"id":3,"pName":"shoes3","pPrice":5000,"pImage":"images/s3.jpg"},
+        {"id":4,"pName":"shoes4","pPrice":7000,"pImage":"images/s4.jpg"},
+        {"id":5,"pName":"shoes5","pPrice":9000,"pImage":"images/s5.jpg"}
+    ],
+    "bags":[
+        {"id":1,"pName":"bags1","pPrice":3000,"pImage":"images/b1.jpg"},
+        {"id":2,"pName":"bags2","pPrice":4000,"pImage":"images/b2.jpg"},
+        {"id":3,"pName":"bags3","pPrice":5000,"pImage":"images/b3.jpg"},
+        {"id":4,"pName":"bags4","pPrice":7000,"pImage":"images/b4.jpg"},
+        {"id":5,"pName":"bags5","pPrice":9000,"pImage":"images/b5.jpg"}
+    ]
+}
