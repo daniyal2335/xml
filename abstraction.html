@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Shape {
+  constructor() {
+    if (this.constructor === Shape) {
+      throw new Error('Abstract class cannot be instantiated');
+    }
+  }
+
+  // Abstract method
+  calculateArea() {
+    throw new Error('Method not implemented');
+  }
+}
+
+class Circle extends Shape {
+  constructor(radius) {
+    super();
+    this.radius = radius;
+  }
+
+  // Implementation of the abstract method
+  calculateArea() {
+    return Math.PI * this.radius * this.radius;
+  }
+}
+
+class Square extends Shape {
+  constructor(side) {
+    super();
+    this.side = side;
+  }
+
+  // Implementation of the abstract method
+  calculateArea() {
+    return this.side * this.side;
+  }
+}
+
+// Example usage
+const circle = new Circle(5);
+console.log('Circle Area:', circle.calculateArea());
+
+const square = new Square(4);
+console.log('Square Area:', square.calculateArea());
+
+    </script>
+</body>
+</html>

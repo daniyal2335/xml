@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Animal {
+            habbit;
+            eat() {
+                return "all animal eat something and habbit of animal is" + this.habbit;
+            }
+        }
+        class Dog extends Animal {
+            bark() {
+                return 'all dogs are barking'
+            }
+        }
+        // let Animalobj= new Animal;
+        // Animalobj.habbit="loyal";
+        // let A1=Animalobj.eat();
+        // console.log(A1);
+        let Dogobj = new Dog;
+        Dogobj.habbit = "loyal";
+        let Dog1 = Dogobj.eat();
+        console.log(Dog1);
+        let b1 = Dogobj.bark();
+        console.log(b1);
+    </script>
+</body>
+
+</html>

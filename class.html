@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oop</title>
+</head>
+
+<body>
+    <script>
+        class Car {
+            name;
+            modal;
+            color;
+            drive(cname, cmodal) {
+                return cname + "and modal is" + cmodal;
+            }
+            brake(ccolor) {
+                return ccolor;
+            }
+        }
+        let car1 = new Car();
+        let c1Detail = car1.drive('suzuki', 2021);
+        let car2 = new Car();
+        let c2Detail = car2.drive('suzuki', 2022);
+        let c2Details = car2.brake('red');
+        console.log(c1Detail);
+        console.log(c2Detail);
+        console.log(c2Details);
+    </script>
+</body>
+
+</html>

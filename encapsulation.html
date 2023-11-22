@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class employee{
+setEmpDetails(name,id,phoneNO){
+    this.name=name;
+    this.id=id;
+    this.phoneNO=phoneNO;
+}
+getEmpName(){
+    return this.name;
+    
+}
+getEmpid(){
+    return this.id;
+
+}
+getEmpphoneNo(){
+    return this.phoneNO;
+}
+
+        }
+        let emp1 = new employee();
+        emp1.setEmpDetails('daniyal',77655,8998654444);
+        console.log(emp1.getEmpName());
+        console.log(emp1.getEmpid());
+        console.log(emp1.getEmpphoneNo());
+    </script>
+</body>
+</html>

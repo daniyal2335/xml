@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        class A {
+            number;
+            multiplication(n1, n2) {
+                return n1 * n2;
+            }
+        }
+        class B extends A {
+            multiplication(n3, n4) {
+                return n3 * n4;
+            }
+        }
+        let A1obj = new A();
+        A1obj.number = 3 * 5;
+        let a = A1obj.multiplication(3, 5);
+        console.log(a);
+        let B1obj = new B();
+        B1obj.number = 5 * 6;
+        let b = B1obj.multiplication(5, 6);
+        console.log(b);
+    </script>
+
+
+</body>
+
+</html>

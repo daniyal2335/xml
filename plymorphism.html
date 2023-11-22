@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Fruits {
+            taste;
+            eat() {
+                return "some fruits eat something and taste of fruits is" + this.taste;
+            }
+        }
+        class Apple extends Fruits {
+            eat() {
+                return "some fruits are" + this.taste;
+            }
+        }
+        let Fruitobj = new Fruits;
+        Fruitobj.taste = 'sweets';
+        let f1 = Fruitobj.eat();
+        console.log(f1);
+        let Appleobj = new Apple;
+        Appleobj.taste = "sour";
+        let A1 = Appleobj.eat();
+        console.log(A1);
+    </script>
+</body>
+
+</html>

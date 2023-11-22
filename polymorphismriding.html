@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          class Fruits {
+            taste;
+            eat() {
+                return "parent class these type of fruits are" + this.taste;
+            }
+        }
+        class Apple extends Fruits {
+            eat() {
+                return super.eat();
+                return "child class type of these fruits are" + this.taste;
+            }
+        }
+        let fclass=new Apple;
+        fclass.taste="sweets";
+        let f1=fclass.eat();
+        console.log(f1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <div class="container mt-5">
+        <form action="" onsubmit="return false">
+            <div class="form-group">
+                <label for="">Name</label>
+                <input type="text" name="" id="uName" class="form-control" placeholder="" aria-describedby="helpId">
+                <small id="error" class=""></small>
+            </div>
+            <div class="form-group">
+                <label for="">Email</label>
+                <input type="text" name="" id="uEmail" class="form-control" placeholder="" aria-describedby="helpId">
+                <small id="error" class=""></small>
+            </div>
+            <div class="form-group">
+                <label for="">Password</label>
+                <input type="text" name="" id="upassword" class="form-control" placeholder="" aria-describedby="helpId">
+                <small id="error" class=""></small>
+                <br>
+                <br>
+                <button id="sub" class="btn btn-info">Submit</button>
+            </div>
+    </div>
+    </form>
+    <script>
+        $('#uName').keyup(function () {
+            let userName = $(this).val();
+            let userNameRE = /^[A-Za-z\s]{3,}$/;
+            if (!userNameRE.test(userName)) {
+                $(this).css('border', '2px solid red');
+                $(this).next('#error').show().text('please enter valid name').css('color', 'red');
+            }
+            else {
+                $(this).css('border', '2px solid green');
+                $(this).next('#error').hide();
+            }
+        })
+        $('#uEmail').keyup(function () {
+            let userEmail = $(this).val();
+            let userEmailRE = /^[A-Za-z0-9_]{5,}@[a-z]{5,8}.[a-z]{2,5}$/;
+            if (!userEmailRE.test(userEmail)) {
+                $(this).css('border', '2px solid red');
+                $(this).next('#error').show().text('please enter valid email').css('color', 'red');
+            }
+            else {
+                $(this).css('border', '2px solid green');
+                $(this).next('#error').hide();
+            }
+        })
+        $('#upassword').keyup(function () {
+            let userpassword = $(this).val();
+            let userpasswordRE = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d_\@]{8,}$/;
+            if (!userpasswordRE.test(userpassword)) {
+                $(this).css('border', '2px solid red');
+                $(this).next('#error').show().text('password should contains at least one upper case lower and digit character ').css('color', 'red');
+            }
+            else {
+                $(this).css('border', '2px solid green');
+                $(this).next('#error').hide();
+            }
+        });
+        function emptyFields(id) {
+            if ($(id).val() == '') {
+                $(id).css('border', '1px solid red');
+                $(id).next('#error').show().text('please fill out this field').css('color', 'red');
+            }
+        }
+        $('#sub').click(function () {
+            let userName = $('#uName').val();
+            let userNameRE = /^[A-Za-z\s]{3,}$/;
+            let userEmail = $('#uEmail').val();
+            let userEmailRE = /^[A-Za-z0-9_]{5,}@[a-z]{5,8}.[a-z]{2,5}$/;
+            let userPassword = $('#upassword').val();
+            let userpasswordRE = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d_\@]{8,}$/;
+            let myData = JSON.parse(localStorage.getItem('myData')) || [];
+            emptyFields('#uName');
+            emptyFields('#uEmail');
+            emptyFields('#upassword');
+            if (userNameRE.test(userName) && userEmailRE.test(userEmail) && userpasswordRE.test(userPassword)) {
+                myData.push({ 'name': userName, 'email': userEmail, 'password': userPassword });
+                localStorage.setItem('myData', JSON.stringify(myData));
+                alert('register successfully');
+                $('input').val('');
+                location.assign('rejex.html');
+            }
+            else{
+                alert('invalid data');
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>
